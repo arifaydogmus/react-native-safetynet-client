@@ -1,0 +1,43 @@
+{
+  "name": "react-native-safetynet-client",
+  "version": "0.0.1",
+  "description": "Google SafetyNet Attestation implementation for React Native",
+  "author": "Arif Aydogmus <aydogmus@gmail.com>",
+  "license": "ISC",
+  "homepage": "https://github.com/arifaydogmus/react-native-safetynet-client",
+  "bugs": "https://github.com/arifaydogmus/react-native-safetynet-client/issues",
+  "main": "lib/index.js",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "npm run lint && npm run clean &&  tsc",
+    "test": "jest --no-cache",
+    "test:coverage": "jest --no-cache --coverage",
+    "clean": "shx rm -rf lib",
+    "lint": "tslint --project tsconfig.json  'src/**/*.ts'",
+    "version": "auto-changelog -p"
+  },
+  "keywords": [
+    "react-native",
+    "safetynet",
+    "android device verification",
+    "safetynet attestation"
+  ],
+  "peerDependencies": {
+    "react-native": "^0.57.0"
+  },
+  "dependencies": {
+    "node-fetch": "^2.5.0"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.3.3",
+    "@types/react-native": "^0.57.53",
+    "auto-changelog": "^1.13.0",
+    "react-native": "^0.59.8",
+    "shx": "^0.3.2",
+    "tslint": "^5.16.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.4.5",
+    "typescript-tslint-plugin": "^0.3.1"
+  }
+}

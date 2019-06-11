@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["es2018"],
+    "checkJs": false,
+    "declaration": true,
+    "sourceMap": false,
+    "outDir": "./lib",
+    "removeComments": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "typeRoots": ["node_modules/@types"],
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "plugins": [
+      {
+        "name": "typescript-tslint-plugin",
+        "alwaysShowRuleFailuresAsWarnings": false,
+        "ignoreDefinitionFiles": true,
+        "configFile": "./tslint.json",
+        "suppressWhileTypeErrorsPresent": false,
+        "mockTypeScriptVersion": false
+      }
+    ]
+  },
+  "include": ["./source/**/*"],
+  "exclude": ["android", "node_modules", "example", "lib"]
+}

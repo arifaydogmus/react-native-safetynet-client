@@ -1,0 +1,13 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "rules": {
+    "interface-name": false,
+    "quotemark": [true, "single"],
+    "no-implicit-dependencies": [true, "dev"],
+    "object-literal-sort-keys": false
+  },
+  "linterOptions": {
+    "exclude": ["lib", "android", "example", "node_modules", "*.d.ts"]
+  }
+}
