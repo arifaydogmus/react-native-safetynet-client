@@ -1,6 +1,6 @@
 {
   "name": "react-native-safetynet-client",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Google SafetyNet Attestation implementation for React Native",
   "author": "Arif Aydogmus <aydogmus@gmail.com>",
   "license": "ISC",
@@ -10,8 +10,6 @@
   "scripts": {
     "prepare": "npm run build",
     "build": "npm run lint && npm run clean &&  tsc",
-    "test": "jest --no-cache",
-    "test:coverage": "jest --no-cache --coverage",
     "clean": "shx rm -rf lib",
     "lint": "tslint --project tsconfig.json  'src/**/*.ts'",
     "version": "auto-changelog -p"
@@ -20,7 +18,10 @@
     "react-native",
     "safetynet",
     "android device verification",
-    "safetynet attestation"
+    "safetynet attestation",
+    "recaptcha",
+    "safetynet recaptcha",
+    "captcha verification"
   ],
   "peerDependencies": {
     "react-native": "^0.57.0"
