@@ -84,6 +84,35 @@ public class RNSafetyNetModule extends ReactContextBaseJavaModule {
     });
   }
 
+
+  /**
+   * Send a request to the SafetyNet reCAPTCHA API
+   * See https://developer.android.com/training/safetynet/recaptcha
+   * @param apiKey
+   * @param promise
+   */
+  @ReactMethod
+  public void verifyWithRecaptcha(String apiKey, final Promise promise){
+    Activity activity;
+    activity = getCurrentActivity();
+
+    SafetyNet.getClient(baseContext).verifyWithRecaptcha(apiKey)
+            .addOnSuccessListener(activity,
+                    new OnSuccessListener<SafetyNetApi.RecaptchaTokenResponse>() {
+                      @Override
+                      public void onSuccess(SafetyNetApi.RecaptchaTokenResponse response) {
+                        String result = response.getTokenResult();
+                        promise.resolve(result);
+                      }
+                    })
+            .addOnFailureListener(activity, new OnFailureListener() {
+              @Override
+              public void onFailure(@NonNull Exception e) {
+                promise.reject(e);
+              }
+            });
+  }
+
   private byte[] stringToBytes(String string) {
     byte[] bytes;
     bytes = null;

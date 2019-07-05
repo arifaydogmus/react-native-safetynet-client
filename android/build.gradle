@@ -27,13 +27,13 @@ allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0"
+        versionName "1.1"
     }
     lintOptions {
         abortOnError false
@@ -49,5 +49,5 @@ repositories {
 
 dependencies {
     implementation 'com.facebook.react:react-native:+'
-    implementation 'com.google.android.gms:play-services-safetynet:15.0.0'
+    implementation 'com.google.android.gms:play-services-safetynet:16.0.0'
 }
