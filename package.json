@@ -1,6 +1,6 @@
 {
   "name": "react-native-safetynet-client",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Google SafetyNet Attestation implementation for React Native",
   "author": "Arif Aydogmus <aydogmus@gmail.com>",
   "license": "ISC",
