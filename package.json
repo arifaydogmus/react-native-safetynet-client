@@ -33,7 +33,7 @@
     "@types/node-fetch": "^2.3.3",
     "@types/react-native": "^0.57.53",
     "auto-changelog": "^1.13.0",
-    "react-native": "^0.59.8",
+    "react-native": "^0.62.3",
     "shx": "^0.3.2",
     "tslint": "^5.16.0",
     "tslint-config-prettier": "^1.18.0",
